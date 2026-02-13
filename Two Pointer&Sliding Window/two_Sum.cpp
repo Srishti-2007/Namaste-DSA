@@ -22,7 +22,7 @@ vector<int> twoSum(){
    int sum=0;
    vector<int>ans;
    for(int i=0;i<n-1;i++){
-    for(int j=0;j<n;j++){
+    for(int j=i+1;j<n;j++){
        sum=arr[i]+arr[j];
        if(sum==target){
         ans.push_back(i);
@@ -39,3 +39,20 @@ int main() {
     cout<<store[i]<<" ";
   }
 }
+
+// Another method using map
+
+// var twoSum = function(arr, target) {
+//     let n=arr.length;
+//     let map={};
+//     for(let i=0;i<n;i++)
+//     {
+//         map[arr[i]]=i;
+//     }
+//     for(let i=0;i<n;i++){
+//         let pairfind=target-arr[i];
+//         if(map[pairfind]&&map[pairfind]!=i){
+//             return [i,map[pairfind]]
+//         }
+//     }
+// };
